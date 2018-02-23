@@ -7,7 +7,9 @@ from django.db import models
 class picModel(models.Model):
     # 图片地址
     source = models.CharField(max_length=200) 
+    # 图片地址
+    thumbnail = models.CharField(max_length=200, default="") 
     # 图片分类
-    pic_class = models.IntegerField
+    pic_class = models.IntegerField(default=0)
     # 地址是否有效
-    sourceValid = models.BooleanField
+    sourceValid = models.BooleanField(default=1)
